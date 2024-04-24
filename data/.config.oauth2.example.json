@@ -1,0 +1,31 @@
+{
+  "kreds": {
+    "redirectUrl": "http://localhost:3000/",
+    "strategies": [
+      {
+        "type": "oauth2-oidc",
+        "name": "oauth2",
+        "client": {
+          "id": "123456",
+          "secret": "ABCDEF",
+          "redirectUrl": "http://localhost:4000/kreds/callback/oauth2",
+          "scopes": ["openid", "offline_access", "profile", "email"]
+        },
+        "serverUrl": "http://localhost:8080/"
+      },
+      {
+        "type": "jwt",
+        "name": "jwt",
+        "expiry": 3600,
+        "key": "REPLACEME"
+      }
+    ]
+  },
+  "tidepad": {
+    "useProxy": false,
+    "publicUrls": {
+      "attachments": "http://localhost:4000/attachments/",
+      "thumbnails": "http://localhost:4000/attachments/"
+    }
+  }
+}

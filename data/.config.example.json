@@ -1,0 +1,41 @@
+{
+  "kreds": {
+    "redirectUrl": "http://localhost:4000/",
+    "strategies": [
+      {
+        "type": "mock",
+        "name": "mock",
+        "redirectUrl": "http://localhost:4000/kreds/callback/mock",
+        "payload": {
+          "userInfo": {
+            "sub": "mock",
+            "name": "MockUser",
+            "email": "mock@tidepad.local"
+          },
+          "token": {
+            "refresh_token": "mock"
+          }
+        }
+      },
+      {
+        "type": "jwt",
+        "name": "jwt",
+        "expiry": 3600,
+        "key": "REPLACEME"
+      }
+    ]
+  },
+  "tidepad": {
+    "useProxy": true,
+    "publicUrls": {
+      "attachments": "http://localhost:4000/attachments/",
+      "thumbnails": "http://localhost:4000/attachments/"
+    },
+    "limits": {
+      "files": {
+        "size": 40000000,
+        "count": 10
+      }
+    }
+  }
+}

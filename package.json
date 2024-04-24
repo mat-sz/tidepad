@@ -1,0 +1,35 @@
+{
+  "name": "tidepad",
+  "private": true,
+  "workspaces": [
+    "api",
+    "web"
+  ],
+  "scripts": {
+    "start": "yarn workspaces foreach -Api run start",
+    "build": "yarn workspaces foreach -Api run build",
+    "db:sync": "cd api && yarn db:sync",
+    "start:prod": "cd api && yarn db:sync && yarn start:prod"
+  },
+  "devDependencies": {
+    "eslint": "^8.35.0",
+    "husky": "^8.0.3",
+    "lint-staged": "^13.1.2",
+    "prettier": "^2.8.4",
+    "typescript": "^5.1.6"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "src/**/*.{js,jsx,ts,tsx,json,css,scss,md}": [
+      "prettier --write"
+    ],
+    "__tests__/**/*.{js,jsx,ts,tsx,json,css,scss,md}": [
+      "prettier --write"
+    ]
+  },
+  "packageManager": "yarn@4.0.2"
+}

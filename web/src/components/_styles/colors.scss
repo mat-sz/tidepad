@@ -1,0 +1,41 @@
+.bg_danger {
+  background: #da373c !important;
+
+  &_hover:hover {
+    background: #b12126 !important;
+  }
+}
+
+.bg_primary {
+  background: #104097 !important;
+
+  &_hover:hover {
+    background: #0b4abd !important;
+  }
+}
+
+.bg_success {
+  background: #277136 !important;
+
+  &_hover:hover {
+    background: #24a43e !important;
+  }
+}
+
+.bg_default {
+  background: #3f405c !important;
+
+  &_hover:hover {
+    background: #63659d !important;
+  }
+}
+
+.bg_secondary-danger {
+  background: none !important;
+  color: #da373c !important;
+
+  &_hover:hover {
+    background: none !important;
+    color: #b12126 !important;
+  }
+}

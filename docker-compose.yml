@@ -1,0 +1,8 @@
+version: '3'
+services:
+  tidepad:
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    volumes:
+      - ./data:/app/data
